@@ -1,0 +1,38 @@
+header nav ul {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 20px 10px;
+  margin: 0;
+  gap: 10px;
+  border: var(--border-1);
+  border-radius: 50px;
+  z-index: 2;
+  overflow: hidden;
+  background-color: var(--bg-2);
+}
+
+.active-highlight {
+  position: absolute;
+  background-color: var(--bg-2);
+  border: var(--border-1);
+  border-radius: 30px;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.header-link {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-1);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}

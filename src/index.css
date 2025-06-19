@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+  --bg-1: #1e1e1e;
+  --bg-2: rgba(0, 0, 0, 0.8);
+  --bg-backdrop: #2d2d30;
+  --bg-translucent: rgba(30, 30, 30, 0.8);
+  --border-1: 1px solid #3c3c3c;
+  --border-2: 1px solid #4b4b4b;
+  --text-1: #e7e7e7;
+  --text-2: #c7c7c7;
+  --text-inverse: #383838;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+.theme-dark {
+  --bg-1: #1e1e1e;
+  --bg-2: rgba(0, 0, 0, 0.8);
+  --bg-backdrop: #2d2d30;
+  --bg-translucent: rgba(30, 30, 30, 0.8);
+  --border-1: 1px solid #3c3c3c;
+  --border-2: 1px solid #4b4b4b;
+  --text-1: #e7e7e7;
+  --text-2: #c7c7c7;
+  --text-inverse: #383838;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+.theme-light {
+  --bg-1: #f0f0f0;
+  --bg-2: #ffffff;
+  --bg-backdrop: rgba(255, 255, 255, 0.8);
+  --text-1: #1e1e1e;
+  --text-2: #383838;
+  --text-inverse: #383838;
+  --border-1: 1px solid #dcdcdc;
+  --border-2: 1px solid #c0c0c0;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.theme-matrix {
+  --bg-1: #1e1e1e;
+  --bg-2: rgba(0, 0, 0, 0.8);
+  --bg-backdrop: #2d2d30;
+  --bg-translucent: rgba(30, 30, 30, 0.8);
+  --border-1: 1px solid #00ff00;
+  --border-2: 1px solid #4b4b4b;
+  --text-1: #e7e7e7;
+  --text-2: #c7c7c7;
+  --text-inverse: #383838;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +63,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  margin: 0;
 }
