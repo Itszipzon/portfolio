@@ -15,8 +15,6 @@ jobs:
 
       - name: Build project
         run: |
-          # Replace with your build commands
-          npm install
           npm run build
 
       - name: Upload to server via SCP
