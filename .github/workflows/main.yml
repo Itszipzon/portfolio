@@ -15,8 +15,7 @@ jobs:
 
       - name: Build project
         run: |
-          # Replace with your build commands
-          npm install
+          npm install --legacy-peer-deps
           npm run build
 
       - name: Upload to server via SCP

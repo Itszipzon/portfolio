@@ -109,7 +109,7 @@
 }
 
 .dev-warning-banner {
-  position: relative;
+  position: absolute;
   top: 20px;
   left: calc(50% - 655.8px/2);
   background-color: #fff3cd;
@@ -121,4 +121,5 @@
   border-radius: 4px;
   margin-bottom: 1.5rem;
   width: 655.8px;
+  z-index: 2;
 }
