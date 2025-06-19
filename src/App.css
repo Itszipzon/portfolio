@@ -107,3 +107,18 @@
   padding: 20px;
   z-index: 1;
 }
+
+.dev-warning-banner {
+  position: relative;
+  top: 20px;
+  left: calc(50% - 655.8px/2);
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border: 1px solid #ffeeba;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  width: 655.8px;
+}

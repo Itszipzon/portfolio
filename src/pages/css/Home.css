@@ -9,18 +9,3 @@
   border-radius: 8px;
   border: var(--border-1);
 }
-.dev-warning-banner {
-  background-color: #fff3cd;
-  color: #856404;
-  padding: 1rem;
-  border: 1px solid #ffeeba;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-}
-
-.under-development {
-  font-style: italic;
-  color: #b22222;
-}

@@ -65,6 +65,9 @@ function App() {
 
   return (
     <div className="App">
+      <div className="dev-warning-banner">
+        🚧 This website is under development. Content is placeholder only and not official. 🚧
+      </div>
       <button className={`theme-selector ${theme}`} onClick={() => setThemeSelector(!themeSelector)}>
         {theme === 'matrix' && 
         <div className='matrix'>
