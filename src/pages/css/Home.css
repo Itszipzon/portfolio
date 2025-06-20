@@ -9,3 +9,24 @@
   border-radius: 8px;
   border: var(--border-1);
 }
+
+.home-container .home-social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.home-social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  filter: var(--logo-filter);
+  transition: all 0.3s ease;
+}
+
+.home-social-links img:hover {
+  filter: brightness(1) invert(0);
+}

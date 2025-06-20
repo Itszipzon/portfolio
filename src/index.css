@@ -11,6 +11,7 @@
   --text-2: #c7c7c7;
   --text-inverse: #383838;
   --shadow: rgba(0, 0, 0, 0.3);
+  --logo-filter: brightness(0) invert(1);
 }
 
 .theme-dark {
@@ -24,6 +25,7 @@
   --text-2: #c7c7c7;
   --text-inverse: #383838;
   --shadow: rgba(0, 0, 0, 0.3);
+  --logo-filter: brightness(0) invert(1);
 }
 
 .theme-light {
@@ -36,6 +38,7 @@
   --border-1: 1px solid #dcdcdc;
   --border-2: 1px solid #c0c0c0;
   --shadow: rgba(0, 0, 0, 0.1);
+  --logo-filter: brightness(0) invert(0);
 }
 
 .theme-matrix {
@@ -49,6 +52,7 @@
   --text-2: #c7c7c7;
   --text-inverse: #383838;
   --shadow: rgba(0, 0, 0, 0.3);
+  --logo-filter: brightness(0) invert(1);
 }
 
 body {
