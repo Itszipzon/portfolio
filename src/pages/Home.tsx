@@ -8,6 +8,7 @@ export default function Home() {
     <div className="home-container">
       <h1>Welcome to the Home Page</h1>
       <p>This is the main page of our application.</p>
+      <h2>Socials</h2>
       <div className="home-social-links">
         <Link to="https://github.com/Itszipzon" target="_blank" rel="noopener noreferrer" ><img src={githubLogo} alt="GitHub Logo" className="github-logo" /></Link>
         <Link to="https://www.linkedin.com/in/rune-molander-a943a0263/" target="_blank" rel="noopener noreferrer"><img src={linkedInLogo} alt="LinkedIn Logo" className="linkedin-logo" /></Link>
