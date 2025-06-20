@@ -114,12 +114,21 @@
   left: calc(50% - 655.8px/2);
   background-color: #fff3cd;
   color: #856404;
-  padding: 1rem;
+  padding: 10px 5px;
   border: 1px solid #ffeeba;
   text-align: center;
   font-weight: bold;
   border-radius: 4px;
   margin-bottom: 1.5rem;
-  width: 655.8px;
+  width: 100%;
+  max-width: 655.8px;
   z-index: 2;
+}
+
+@media screen and (max-width: 655px) {
+  .dev-warning-banner {
+    left: 0;
+    width: calc(100% - 10px);
+  }
+  
 }
