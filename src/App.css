@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 .theme-selector.matrix {
@@ -57,7 +57,7 @@
   justify-content: center;
   gap: 5px;
   transition: height 0.3s ease-in-out;
-  z-index: 2;
+  z-index: 3;
   padding: 0px;
 }
 
@@ -122,7 +122,22 @@
   margin-bottom: 1.5rem;
   width: 100%;
   max-width: 655.8px;
-  z-index: 2;
+  z-index: 3;
+}
+
+.dev-warning-banner button {
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  background: none;
+  border: none;
+  font-size: 10px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 655px) {

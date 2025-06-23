@@ -1,23 +1,24 @@
 import './App.css';
 import { Route, Routes } from 'react-router';
-import Home from './pages/Home.tsx';
-import Header from './Header.tsx';
+import Home from './pages/Home';
+import Header from './Header';
 import { useContext, useEffect, useRef, useState } from 'react';
-import Apps from './pages/Apps.tsx';
-import AboutMe from './pages/AboutMe.tsx';
-import { themes, Theme, ThemeContext } from './ThemeContext.tsx';
+import Apps from './pages/Apps';
+import AboutMe from './pages/AboutMe';
+import { themes, Theme, ThemeContext } from './ThemeContext';
 import Cookies from 'js-cookie';
 
 function App() {
   const binaryContainerRef = useRef<HTMLDivElement>(null);
   const {theme, setTheme } = useContext(ThemeContext);
   const [themeSelector, setThemeSelector] = useState(false);
+  const [displayWarning, setDisplayWarning] = useState(true);
 
   useEffect(() => {
     if (theme === "matrix") {
       const numLines = 30;
 
-      function createBinaryLine() {
+      const createBinaryLine = () => {
         const binary = document.createElement('div');
         binary.className = 'binary';
         binary.style.left = Math.random() * 100 + 'vw';
@@ -41,7 +42,7 @@ function App() {
           binary.remove();
           clearInterval(charInterval);
         }, 6000);
-      }
+      };
 
       const spawnInterval = setInterval(() => {
         for (let i = 0; i < numLines / 4; i++) {
@@ -65,7 +66,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="dev-warning-banner">
+      <div className="dev-warning-banner" style={{ display: displayWarning ? 'block' : 'none' }}>
+        <button className="close-banner" onClick={() => setDisplayWarning(false)}>✖️</button>
         🚧 This website is under development. Content is placeholder only and not official. 🚧
       </div>
       <button className={`theme-selector ${theme}`} onClick={() => setThemeSelector(!themeSelector)}>
