@@ -1,58 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
 :root {
+  --bg-2: #252526;
   --bg-1: #1e1e1e;
-  --bg-2: rgba(0, 0, 0, 0.8);
+  --bg-3: #d3ac00;
   --bg-backdrop: #2d2d30;
   --bg-translucent: rgba(30, 30, 30, 0.8);
+  --border-color-1: #3c3c3c;
+  --border-color-2: #4b4b4b;
   --border-1: 1px solid #3c3c3c;
   --border-2: 1px solid #4b4b4b;
+  --border-color-1: #3c3c3c;
+  --border-color-2: #4b4b4b;
   --text-1: #e7e7e7;
   --text-2: #c7c7c7;
   --text-inverse: #383838;
   --shadow: rgba(0, 0, 0, 0.3);
   --logo-filter: brightness(0) invert(1);
+  --inverse: white;
 }
 
 .theme-dark {
+  --bg-2: #252526;
   --bg-1: #1e1e1e;
-  --bg-2: rgba(0, 0, 0, 0.8);
+  --bg-3: #d3ac00;
   --bg-backdrop: #2d2d30;
   --bg-translucent: rgba(30, 30, 30, 0.8);
   --border-1: 1px solid #3c3c3c;
   --border-2: 1px solid #4b4b4b;
+  --border-color-1: #3c3c3c;
+  --border-color-2: #4b4b4b;
   --text-1: #e7e7e7;
   --text-2: #c7c7c7;
   --text-inverse: #383838;
   --shadow: rgba(0, 0, 0, 0.3);
   --logo-filter: brightness(0) invert(1);
+  --inverse: white;
 }
 
 .theme-light {
   --bg-1: #f0f0f0;
   --bg-2: #ffffff;
+  --bg-3: #d3ac00;
   --bg-backdrop: rgba(255, 255, 255, 0.8);
   --text-1: #1e1e1e;
   --text-2: #383838;
   --text-inverse: #383838;
   --border-1: 1px solid #dcdcdc;
   --border-2: 1px solid #c0c0c0;
+  --border-color-1: #dcdcdc;
+  --border-color-2: #c0c0c0;
   --shadow: rgba(0, 0, 0, 0.1);
   --logo-filter: brightness(0) invert(0);
-}
-
-.theme-matrix {
-  --bg-1: #1e1e1e;
-  --bg-2: rgba(0, 0, 0, 0.8);
-  --bg-backdrop: #2d2d30;
-  --bg-translucent: rgba(30, 30, 30, 0.8);
-  --border-1: 1px solid #00ff00;
-  --border-2: 1px solid #4b4b4b;
-  --text-1: #e7e7e7;
-  --text-2: #c7c7c7;
-  --text-inverse: #383838;
-  --shadow: rgba(0, 0, 0, 0.3);
-  --logo-filter: brightness(0) invert(1);
+  --inverse: black;
 }
 
 body {
