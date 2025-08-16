@@ -23,46 +23,52 @@ function HomeRight() {
       <div className='home-right-bottom'>
         <div className='home-right-bottom-container'>
           <div className='home-right-bottom-list'>
-            <ul>
-              <li><h2>Skills</h2></li>
-              <li><FontAwesomeIcon icon={faCodeMerge} />Version control (GitHub/GitLab)</li>
-              <li><FontAwesomeIcon icon={faLinux} />Linux</li>
-              <li><FontAwesomeIcon icon={faCubes} />Docker</li>
-              <li><FontAwesomeIcon icon={faProjectDiagram} />Kubernetes</li>
-              <li><FontAwesomeIcon icon={faCubes} />Openstack/Terraform</li>
-              <li><FontAwesomeIcon icon={faProjectDiagram} />CI/CD Pipelines</li>
-              <li><FontAwesomeIcon icon={faCloud} />Cloud Infrastructure (AWS/Azure/GCP)</li>
-              <li><FontAwesomeIcon icon={faLanguage} />Fluent in Norwegian and English</li>
-              <li><FontAwesomeIcon icon={faCogs} />Familiar with Agile Methods</li>
-              <li><FontAwesomeIcon icon={faMobileAlt} />Mobile Development</li>
-              <li><FontAwesomeIcon icon={faCode} />Front-end Programming</li>
-              <li><FontAwesomeIcon icon={faServer} />Back-end Programming</li>
-            </ul>
+            <div className='home-right-bottom-list-headers'>
+              <div><h2>Skills</h2></div>
+              <div><h2>Programming</h2></div>
+              <div><h2>Frameworks</h2></div>
+            </div>
+            <div className='home-right-bottom-lists-lists'>
 
-            <ul>
-              <li><h2>Programming</h2></li>
-              <li className='fav'><FontAwesomeIcon icon={faRust} />Rust</li>
-              <li className='fav'><FontAwesomeIcon icon={faJava} />Java</li>
-              <li><FontAwesomeIcon icon={faJs} />JavaScript</li>
-              <li className='fav'><FontAwesomeIcon icon={faCode} />Typescript</li>
-              <li><FontAwesomeIcon icon={faPython} />Python</li>
-              <li className='fav'><FontAwesomeIcon icon={faDartLang} />Dart</li>
-              <li className='fav'><FontAwesomeIcon icon={faC} />C++</li>
-              <li><FontAwesomeIcon icon={faC} />C#</li>
-              <li><FontAwesomeIcon icon={faC} />C</li>
-              <li className='fav'><FontAwesomeIcon icon={faDatabase} />MySQL</li>
-              <li className='fav'><FontAwesomeIcon icon={faDatabase} />PostgreSQL</li>
-            </ul>
-            <ul>
-              <li><h2>Frameworks</h2></li>
-              <li className='fav'><FontAwesomeIcon icon={faJava} />Spring-boot</li>
-              <li className='fav'><FontAwesomeIcon icon={faJs} />React</li>
-              <li><FontAwesomeIcon icon={faVuejs} />Vue.js</li>
-              <li className='fav'><FontAwesomeIcon icon={faDartLang} />Flutter</li>
-              <li><FontAwesomeIcon icon={faJava} />JavaFX</li>
-              <li className='fav'><FontAwesomeIcon icon={faRust} />Egui</li>
-            </ul>
+              <ul>
+                <li><FontAwesomeIcon icon={faCodeMerge} />Version control (GitHub/GitLab)</li>
+                <li><FontAwesomeIcon icon={faLinux} />Linux</li>
+                <li><FontAwesomeIcon icon={faCubes} />Docker</li>
+                <li><FontAwesomeIcon icon={faProjectDiagram} />Kubernetes</li>
+                <li><FontAwesomeIcon icon={faCubes} />Openstack/Terraform</li>
+                <li><FontAwesomeIcon icon={faProjectDiagram} />CI/CD Pipelines</li>
+                <li><FontAwesomeIcon icon={faCloud} />Cloud Infrastructure (AWS/Azure/GCP)</li>
+                <li><FontAwesomeIcon icon={faLanguage} />Fluent in Norwegian and English</li>
+                <li><FontAwesomeIcon icon={faCogs} />Familiar with Agile Methods</li>
+                <li><FontAwesomeIcon icon={faMobileAlt} />Mobile Development</li>
+                <li><FontAwesomeIcon icon={faCode} />Front-end Programming</li>
+                <li><FontAwesomeIcon icon={faServer} />Back-end Programming</li>
+              </ul>
 
+              <ul>
+                <li className='fav'><FontAwesomeIcon icon={faRust} />Rust</li>
+                <li className='fav'><FontAwesomeIcon icon={faJava} />Java</li>
+                <li><FontAwesomeIcon icon={faJs} />JavaScript</li>
+                <li className='fav'><FontAwesomeIcon icon={faCode} />Typescript</li>
+                <li><FontAwesomeIcon icon={faVuejs} />Vue.js</li>
+                <li><FontAwesomeIcon icon={faPython} />Python</li>
+                <li className='fav'><FontAwesomeIcon icon={faDartLang} />Dart</li>
+                <li className='fav'><FontAwesomeIcon icon={faC} />C++</li>
+                <li><FontAwesomeIcon icon={faC} />C#</li>
+                <li><FontAwesomeIcon icon={faC} />C</li>
+                <li className='fav'><FontAwesomeIcon icon={faDatabase} />MySQL</li>
+                <li className='fav'><FontAwesomeIcon icon={faDatabase} />PostgreSQL</li>
+              </ul>
+              <ul>
+                <li className='fav'><FontAwesomeIcon icon={faJava} />Spring-boot</li>
+                <li className='fav'><FontAwesomeIcon icon={faJs} />React</li>
+                <li><FontAwesomeIcon icon={faVuejs} />Vue.js</li>
+                <li className='fav'><FontAwesomeIcon icon={faDartLang} />Flutter</li>
+                <li><FontAwesomeIcon icon={faJava} />JavaFX</li>
+                <li className='fav'><FontAwesomeIcon icon={faRust} />Egui</li>
+              </ul>
+
+            </div>
 
           </div>
           <div className='home-right-bottom-note'>
