@@ -52,13 +52,13 @@
 .home-right-bottom .home-right-bottom-list-headers {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  width: 100%;
 }
 
 .home-right-bottom .home-right-bottom-list-headers div {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: calc(100%/3 - 20px);
   border-bottom: var(--border-1);
 }
 
@@ -70,7 +70,7 @@
 
 .home-right-bottom ul {
   padding: 0;
-  width: 30%;
+  width: calc(100%/3 - 20px);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -95,4 +95,12 @@
   width: 100%;
   justify-content: center;
 
+}
+
+@media screen and (max-height: 1042px) {
+.home-right-bottom .home-right-bottom-list-headers {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 15px);
+}
 }
