@@ -2,12 +2,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faDatabase, faCodeMerge, faCloud, faProjectDiagram, faCubes, faLanguage, faMobileAlt, faServer, faCogs, faC } from '@fortawesome/free-solid-svg-icons';
 import './css/home-right.css';
 import { faDartLang, faJava, faJs, faLinux, faPython, faRust, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function HomeRight() {
 
   const [showNotImplemented, setShowNotImplemented] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(-1)
+  const [selectedProject, setSelectedProject] = useState(-1);
+
+  useEffect(() => {
+    console.log("Selected project:", selectedProject);
+  }, [selectedProject]);
 
   let projects = require("../projects.json");
 
@@ -39,7 +43,7 @@ function HomeRight() {
           <h2>Highlighted Projects:</h2>
           <div className='highlighted-projects'>
             {projects.projects.map((p, i) => {
-              return <div onClick={() => setShowNotImplemented(true)} key={i}><h3>{p.name}</h3></div>
+              return <div onClick={() => {setShowNotImplemented(true); setSelectedProject(p.id)}} key={i}><h3>{p.name}</h3></div>
             })}
           </div>
         </div>
