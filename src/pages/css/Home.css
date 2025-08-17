@@ -2,4 +2,55 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  font-family: sans-serif;
+}
+
+
+.about-project-container {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(27, 27, 27, 0.6);
+  height: 100dvh;
+  width: 100dvw;
+  margin: -20px 0 0 -20px;
+}
+
+.about-project-container.active {
+  display: flex;
+}
+
+.about-project {
+  width: 500px;
+  height: 350px;
+  background-color: var(--bg-2);
+  border-radius: 16px;
+  border: var(--border-1);
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button-container {
+  width: calc(100% - 2.5);
+  height: 23px;
+  padding: 5px;
+  display: flex;
+  justify-content: end;
+}
+
+.close-button-container button {
+  background-color: var(--bg-1);
+  border: var(--border-2);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(350px - 35px);
 }

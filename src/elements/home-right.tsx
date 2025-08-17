@@ -2,31 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faDatabase, faCodeMerge, faCloud, faProjectDiagram, faCubes, faLanguage, faMobileAlt, faServer, faCogs, faC } from '@fortawesome/free-solid-svg-icons';
 import './css/home-right.css';
 import { faDartLang, faJava, faJs, faLinux, faPython, faRust, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 
-function HomeRight() {
+function HomeRight({ projects, setSelectedProject }) {
 
-  const [showNotImplemented, setShowNotImplemented] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(-1);
-
-  useEffect(() => {
-    console.log("Selected project:", selectedProject);
-  }, [selectedProject]);
-
-  let projects = require("../projects.json");
 
   return (
     <div className="home-right">
-      <div className={`about-project-container ${showNotImplemented ? "active" : ""}`}>
-        <div className='about-project'>
-          <div className='close-button-container'>
-            <button onClick={() => setShowNotImplemented(false)}>X</button>
-          </div>
-          <div className='message-container'>
-            Not yet implemented
-          </div>
-        </div>
-      </div>
       <div className='home-right-top'>
         <div className='about-me home-right-top-container'>
           <h2>About Me</h2>
@@ -40,10 +22,10 @@ function HomeRight() {
           </p>
         </div>
         <div className='highlighted-projects-container home-right-top-container'>
-          <h2>Highlighted Projects:</h2>
+          <div><h2>Highlighted Projects:</h2><Link to="">Show more</Link></div>
           <div className='highlighted-projects'>
-            {projects.projects.map((p, i) => {
-              return <div onClick={() => {setShowNotImplemented(true); setSelectedProject(p.id)}} key={i}><h3>{p.name}</h3></div>
+            {projects.map((p, i) => {
+              return <div onClick={() => setSelectedProject(p)} key={i}><h3>{p.name}</h3></div>
             })}
           </div>
         </div>
