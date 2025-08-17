@@ -6,6 +6,15 @@ import { Link } from 'react-router';
 
 function HomeRight({ projects, setSelectedProject }) {
 
+  const highlightedProjects = projects
+    .filter(p => p.priority > 0 && p.priority < 5)
+    .sort((a, b) => {
+      if (a.priority === 1 && b.priority !== 1) return -1;
+      if (b.priority === 1 && a.priority !== 1) return 1;
+      if (a.priority === 3 && b.priority !== 3) return 1;
+      if (b.priority === 3 && a.priority !== 3) return -1;
+      return a.priority - b.priority;
+    });
 
   return (
     <div className="home-right">
@@ -24,7 +33,7 @@ function HomeRight({ projects, setSelectedProject }) {
         <div className='highlighted-projects-container home-right-top-container'>
           <div><h2>Highlighted Projects:</h2><Link to="">Show more</Link></div>
           <div className='highlighted-projects'>
-            {projects.map((p, i) => {
+            {highlightedProjects.map((p, i) => {
               return <div onClick={() => setSelectedProject(p)} key={i}><h3>{p.name}</h3></div>
             })}
           </div>
