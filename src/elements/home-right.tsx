@@ -2,12 +2,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faDatabase, faCodeMerge, faCloud, faProjectDiagram, faCubes, faLanguage, faMobileAlt, faServer, faCogs, faC } from '@fortawesome/free-solid-svg-icons';
 import './css/home-right.css';
 import { faDartLang, faJava, faJs, faLinux, faPython, faRust, faVuejs } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
 
 function HomeRight() {
+
+  const [showNotImplemented, setShowNotImplemented] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(-1)
+
+  let projects = require("../projects.json");
+
   return (
     <div className="home-right">
+      <div className={`about-project-container ${showNotImplemented ? "active" : ""}`}>
+        <div className='about-project'>
+          <div className='close-button-container'>
+            <button onClick={() => setShowNotImplemented(false)}>X</button>
+          </div>
+          <div className='message-container'>
+            Not yet implemented
+          </div>
+        </div>
+      </div>
       <div className='home-right-top'>
-        <div className='about-me'>
+        <div className='about-me home-right-top-container'>
           <h2>About Me</h2>
           <p>
             I am a data engineer and software developer with a bachelor's degree from the Norwegian University of Science and Technology (NTNU, 2025).
@@ -18,7 +35,14 @@ function HomeRight() {
             I enjoy solving complex problems, learning new technologies, and delivering high-quality solutions that make a tangible impact.
           </p>
         </div>
-        <div></div>
+        <div className='highlighted-projects-container home-right-top-container'>
+          <h2>Highlighted Projects:</h2>
+          <div className='highlighted-projects'>
+            {projects.projects.map((p, i) => {
+              return <div onClick={() => setShowNotImplemented(true)} key={i}><h3>{p.name}</h3></div>
+            })}
+          </div>
+        </div>
       </div>
       <div className='home-right-bottom'>
         <div className='home-right-bottom-container'>

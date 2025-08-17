@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './css/home-left.css';
-import { faCakeCandles, faEnvelope, faLocation, faLocationDot, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCakeCandles, faEnvelope, faLocationDot, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
 
 function HomeLeft() {
   return (
