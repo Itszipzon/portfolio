@@ -55,3 +55,10 @@
   align-items: center;
   height: calc(350px - 35px);
 }
+
+
+@media screen and (max-width: 1515px) {
+  .home-container {
+    flex-direction: column;
+  }
+}
