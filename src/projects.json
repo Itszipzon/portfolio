@@ -4,6 +4,7 @@
       "id": 0,
       "name": "File Share",
       "description": "",
+      "pfp": "/img/fileshare/logo.png",
       "images": [],
       "priority": 1,
       "Github": ""
@@ -12,6 +13,7 @@
       "id": 1,
       "name": "Questionaire",
       "description": "",
+      "pfp": "/img/questionaire/logo.png",
       "images": [],
       "priority": 2,
       "Github": ""
@@ -20,6 +22,7 @@
       "id": 2,
       "name": "Ship Visualization",
       "description": "",
+      "pfp": "/img/shipvisualization/logo.png",
       "images": [],
       "priority": 3,
       "Github": ""
@@ -28,6 +31,7 @@
       "id": 3,
       "name": "Car Rental",
       "description": "",
+      "pfp": "/img/carrental/logo.png",
       "images": [],
       "priority": 4,
       "Github": ""

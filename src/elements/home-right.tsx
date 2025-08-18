@@ -3,8 +3,11 @@ import { faCode, faDatabase, faCodeMerge, faCloud, faProjectDiagram, faCubes, fa
 import './css/home-right.css';
 import { faDartLang, faJava, faJs, faLinux, faPython, faRust, faVuejs } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router';
+import { useState } from 'react';
 
 function HomeRight({ projects, setSelectedProject }) {
+
+  const [hoveredProject, setHoveredProject] = useState(-1);
 
   const highlightedProjects = projects
     .filter(p => p.priority > 0 && p.priority < 5)
@@ -34,7 +37,12 @@ function HomeRight({ projects, setSelectedProject }) {
           <div><h2>Highlighted Projects:</h2><Link to="">Show more</Link></div>
           <div className='highlighted-projects'>
             {highlightedProjects.map((p, i) => {
-              return <div onClick={() => setSelectedProject(p)} key={i}><h3>{p.name}</h3></div>
+              return (
+                <div onClick={() => setSelectedProject(p)} key={i} onMouseOver={() => setHoveredProject(i)} onMouseOut={() => setHoveredProject(-1)}>
+                  <h3 className={`highlighted-projects-name ${hoveredProject === i ? 'hovered' : ''}`}>{p.name}</h3>
+                  <img className={`highlighted-projects-img ${hoveredProject === i ? 'hovered' : ''}`} src={p.pfp} alt={p.name} />
+                </div>
+              );
             })}
           </div>
         </div>
