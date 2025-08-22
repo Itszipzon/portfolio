@@ -52,6 +52,10 @@
   font-size: 16px;
 }
 
+.home-left .home-left-detail svg {
+  color: var(--color-1);
+}
+
 .home-left .home-left-detail span {
   font-weight: bold;
 }

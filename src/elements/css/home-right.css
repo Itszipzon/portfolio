@@ -6,6 +6,29 @@
   background-color: var(--bg-1);
   gap: 20px;
   font-family: sans-serif;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-1) #37373800;
+  padding-right: 20px;
+}
+
+.home-right::-webkit-scrollbar {
+  width: 10px;
+}
+
+.home-right::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.home-right::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-1), #3f37c9);
+  border-radius: 10px;
+  border: 2px solid #1e1e2f;
+}
+
+.home-right::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-1), #4f46e5);
 }
 
 .home-right-top {
@@ -21,7 +44,6 @@
   border-radius: 32px;
   border: var(--border-1);
   width: calc(100% - 20px);
-  overflow: auto;
 }
 
 .home-right-top .highlighted-projects {
@@ -34,6 +56,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.home-right-top .highlighted-projects-container h2 {
+  margin-bottom: 16px;
 }
 
 .home-right-top .highlighted-projects-container div a {
@@ -51,6 +77,7 @@
   align-items: center;
   cursor: pointer;
   flex-direction: column;
+  position: relative;
 }
 
 .home-right-top .highlighted-projects div .highlighted-projects-name {
@@ -71,6 +98,9 @@
   border-radius: 50%;
   transition: all 0.5s ease;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .home-right-top .highlighted-projects div .highlighted-projects-img.hovered {
@@ -78,10 +108,25 @@
   width: 75px;
 }
 
+.home-right-middle {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.home-right-middle-container {
+  background-color: var(--bg-2);
+  padding: 20px 10px;
+  border-radius: 32px;
+  border: var(--border-1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .home-right-bottom {
   display: flex;
   width: 100%;
-  height: calc(100dvh - 390px);
   gap: 20px;
 }
 
@@ -138,6 +183,10 @@
   font-size: 15px;
   display: flex;
   gap: 10px;
+}
+
+.home-right-bottom ul li svg {
+  color: var(--color-1);
 }
 
 .home-right-bottom ul li.fav {

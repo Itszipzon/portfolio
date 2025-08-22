@@ -23,13 +23,14 @@
 }
 
 .about-project {
-  width: 500px;
-  height: 350px;
+  width: 90dvw;
+  height: 90dvh;
   background-color: var(--bg-2);
   border-radius: 16px;
   border: var(--border-1);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .close-button-container {
@@ -51,14 +52,233 @@
 .message-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: calc(350px - 35px);
+  height: calc(100% - 35px);
+  flex: 1;
+  padding: 0 20px 20px 20px;
+  gap: 15px;
+  overflow: hidden;
 }
 
+.project-header {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--border-1, #333);
+  padding-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.project-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary, #fff);
+}
+
+.slideshow-container {
+  width: 80%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.project-info {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.project-description {
+  border: var(--border-2);
+  border-radius: 8px;
+  padding: 12px;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 80px;
+  max-height: 150px;
+}
+
+.project-description p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-secondary, #ccc);
+  font-size: 14px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.project-links a {
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.slideshow-arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.slideshow-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.image-counter {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 11;
+}
+
+.image-slider {
+  width: calc(100% - 80px);
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.image-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.image-track.no-transition {
+  transition: none !important;
+}
+
+.slide {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+}
+
+.single-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.no-images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #888;
+}
+
+.image-container {
+  width: 75%;
+  height: 45%;
+  display: flex;
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.github-icon:hover {
+  filter: brightness(0) invert(0);
+}
 
 @media screen and (max-width: 1515px) {
   .home-container {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-project {
+    width: 90dvw;
+    height: 90dvh;
+    max-width: none;
+    max-height: none;
+  }
+  
+  .slideshow-container {
+    width: 90%;
+    height: 40%;
+  }
+  
+  .project-info {
+    width: 90%;
+  }
+  
+  .project-header h2 {
+    font-size: 20px;
+  }
+  
+  .message-container {
+    padding: 0 15px 15px 15px;
+    gap: 12px;
+  }
+  
+  .project-description {
+    padding: 10px;
+    max-height: 120px;
+  }
+  
+  .project-description p {
+    font-size: 13px;
   }
 }

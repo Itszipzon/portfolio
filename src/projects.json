@@ -4,7 +4,8 @@
       "id": 0,
       "name": "File Share",
       "description": "",
-      "pfp": "/img/fileshare/logo.png",
+      "img_location": "/img/fileshare/",
+      "pfp": "logo.png",
       "images": [],
       "priority": 1,
       "Github": ""
@@ -13,7 +14,8 @@
       "id": 1,
       "name": "Questionaire",
       "description": "",
-      "pfp": "/img/questionaire/logo.png",
+      "img_location": "/img/questionaire/",
+      "pfp": "logo.png",
       "images": [],
       "priority": 2,
       "Github": ""
@@ -22,7 +24,8 @@
       "id": 2,
       "name": "Ship Visualization",
       "description": "",
-      "pfp": "/img/shipvisualization/logo.png",
+      "img_location": "/img/shipvisualization/",
+      "pfp": "logo.png",
       "images": [],
       "priority": 3,
       "Github": ""
@@ -31,8 +34,21 @@
       "id": 3,
       "name": "Car Rental",
       "description": "",
-      "pfp": "/img/carrental/logo.png",
-      "images": [],
+      "img_location": "/img/carrental/",
+      "pfp": "logo.png",
+      "images": [
+        "carrental1",
+        "carrental2",
+        "carrental3",
+        "carrental4",
+        "carrental5",
+        "carrental6",
+        "carrental7",
+        "carrental8",
+        "carrental9",
+        "carrental10",
+        "carrental11"
+      ],
       "priority": 4,
       "Github": ""
     }

@@ -3,7 +3,7 @@
   height: calc(100dvh - 40px);
   color: var(--text-1);
   font-family: monospace;
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   height: 100%;
 }
 

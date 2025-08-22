@@ -26,7 +26,7 @@ function HomeRight({ projects, setSelectedProject }) {
           <h2>About Me</h2>
           <p>
             I am a data engineer and software developer with a bachelor's degree from the Norwegian University of Science and Technology (NTNU, 2025).
-            I specialize in both front-end and back-end development, with experience in modern frameworks and technologies including React, Vue.js, Spring Boot, Docker, Kubernetes, and cloud platforms such as AWS, Azure, and GCP.
+            I specialize in both front-end and back-end development, with experience in modern frameworks and technologies.
           </p>
           <p>
             My work focuses on creating efficient, scalable, and maintainable applications. I have experience with web and mobile development, cloud infrastructure, DevOps practices, and secure system design.
@@ -40,11 +40,16 @@ function HomeRight({ projects, setSelectedProject }) {
               return (
                 <div onClick={() => setSelectedProject(p)} key={i} onMouseOver={() => setHoveredProject(i)} onMouseOut={() => setHoveredProject(-1)}>
                   <h3 className={`highlighted-projects-name ${hoveredProject === i ? 'hovered' : ''}`}>{p.name}</h3>
-                  <img className={`highlighted-projects-img ${hoveredProject === i ? 'hovered' : ''}`} src={p.pfp} alt={p.name} />
+                  <img className={`highlighted-projects-img ${hoveredProject === i ? 'hovered' : ''}`} src={p.img_location + p.pfp} alt={p.name} />
                 </div>
               );
             })}
           </div>
+        </div>
+      </div>
+      <div className='home-right-middle'>
+        <div className='home-right-middle-container'>
+          <h2>My work experience</h2>
         </div>
       </div>
       <div className='home-right-bottom'>
